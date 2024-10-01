@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Recipe Idea Generator</title>
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700|Raleway:400,700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="" />
+            <span style="color: #272727">
+              Good Food
+            </span>
+          </a>
+
+          <div class="navbar-collapse" id="">
+            <div class="custom_menu-btn">
+              <button onclick="openNav()">
+                <span class="s-1"> </span>
+                <span class="s-2"> </span>
+                <span class="s-3"> </span>
+              </button>
+            </div>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                <a href="index.html">Home</a>
+                <a href="account.html">Account</a>
+                <a href="contact.html">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class=" slider_section position-relative">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 offset-md-1">
+            <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+                  01
+                </li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1">
+                  02
+                </li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2">
+                  03
+                </li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3">
+                  04
+                </li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="img-box b-1">
+                    <img src="images/slider-img.png" alt="" />
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="img-box b-2">
+                    <img src="images/hot-1.png" alt="" />
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="img-box b-3">
+                    <img src="images/hot-2.png" alt="" />
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="img-box b-4">
+                    <img src="images/hot-3.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="carousel_btn-box">
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class=" col-md-5 offset-md-1">
+            <div class="detail-box">
+              <h1>
+              <center>Generate Recipes Now!</center>
+              </h1>
+              <p>
+                <center><strong>Not sure what to make for dinner tonight?</strong> Create an account with the button below and harness the power of AI to plan meals tailored to your calorie needs, dietary restrictions, and preferences. You'll never waste leftovers or spend hours meal planning again!</center>
+              </p>
+              <div class="btn-box"><center>
+                <a href="contact.html" class="btn-1">
+                  Contact Us
+                </a>
+                <a href="account.html" class="btn-2">
+                  Login
+                </a>
+              </center></div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- about section -->
+  <section class="about_section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-5 offset-md-1">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                Try
+                It
+                Out
+              </h2>
+              <hr>
+            </div>
+            <p><center>
+              Don't have an account? No worries, try it out without signing in! Fill out the form to the right with ingredients you have, your preferred cuisine, dietary restrictions (like vegan or gluten-free), food allergies, desired difficulty level, time constraints, and calorie needs. After pressing the submit button, you will receive a recipe that meets all of your requirements.
+            </center></p>
+          
+          </div>
+        </div>
+        <div class="col-md-5 px-0">
+          <!-- added this form in to replace picture-->
+          <div class="form_container">
+            <form action="/submit_form" method="post">
+              <input type="text" id="ingredients" name="ingredients" placeholder="Ingredients:"><br>
+              <input type="text" id="cuisine" name="cuisine" placeholder="Cuisine:"><br>
+              <input type="text" id="diet" name="diet" placeholder="Dietary Restrictions:"><br>
+              <input type="text" id="allergy" name="allergy" placeholder="Food Allergies:"><br>
+              <select id="difficulty" name="difficulty">
+                <label for="difficulty">Difficulty level</label>
+                <option value="option1">Beginner</option>
+                <option value="option2">Intermediate</option>
+                <option value="option3">Advanced</option>
+              </select><br>
+              <select id="time" name="time">
+                <option value="option1">Less than 30 minutes</option>
+                <option value="option2">30 minutes to an hour</option>
+                <option value="option3">Greater than one hour</option>
+              </select><br>
+              <input type="text" id="min" name="min" placeholder="Calorie minimum:"><br>
+              <input type="text" id="max" name="max" placeholder="Calorie Maximum:"><br>
+            <center><button>
+                Submit
+              </button></center>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- dish section -->
+
+  <section class="dish_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="dish_container">
+            <div class="box">
+              <img src="images/dish.jpg" alt="">
+            </div>
+            <div class="box">
+              <img src="images/dish.jpg" alt="">
+            </div>
+            <div class="box">
+              <img src="images/dish.jpg" alt="">
+            </div>
+            <div class="box">
+              <img src="images/dish.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <hr>
+              <h2>
+                Why AI Recipes
+              </h2>
+            </div>
+            <p><center>
+              AI Recipe Generator was created to eliminate food waste, reduce the burden of meal planning, and help users become more confident in the kitchen. Anyone can generate recipes without signing up, but an account allows you to save and like recipes, and store them away for later, so you can come back time and time again.
+            </center></p>
+            <center><a href="account.html">
+              Create Account
+            </a></center>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end dish section -->
+
+  <!-- hot section -->
+
+  <section class="hot_section layout_padding">
+      <h2><b><center>
+        What's Hot
+      </center></b></h2>
+      <p><center>
+        Any of the three buttons below will allow you to view recipes that have already been generated. Click to discover the most popular dishes, revisit your favorite recipes, or take a chance and generate a random recipe.
+      </center></p>
+    <div class="carousel_container">
+      <div class="container">
+        <div class="carousel-wrap ">
+          <div class="owl-carousel">
+            <div class="item">
+              <div class="box">
+                <div class="img-box">
+                  <img src="images/hot-1.png" />
+                </div>
+                <div class="detail-box">
+                  <h4>
+                    Popular
+                  </h4>
+                  <p>
+                    View most popular recipes based on user likes.
+                  </p>
+                  <a href="">
+                    View
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="box">
+                <div class="img-box">
+                  <img src="images/hot-2.png" />
+                </div>
+                <div class="detail-box">
+                  <h4>
+                    Previous
+                  </h4>
+                  <p>
+                    Click on the button below to view recipes you've previously generated.
+                  </p>
+                  <a href="">
+                    View
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="box">
+                <div class="img-box">
+                  <img src="images/hot-3.png" />
+                </div>
+                <div class="detail-box">
+                  <h4>
+                    Random
+                  </h4>
+                  <p>
+                    Have no idea what to cook tonight? Generate a random recipe here.
+                  </p>
+                  <a href="">
+                    View
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end hot section -->
+
+  <!-- about section -->
+  <section class="about_section layout_margin">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-5 offset-md-1">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                About Us <br>
+              </h2>
+              <hr>
+            </div>
+            <p>
+              This website was created by students at the University of Central Florida. Our goal is to develop a website that allows users to generate recipes with AI technology. These recipes cater to individual dietary preferences, reduce food waste, and make meal planning easier.
+            </p>
+            <!--
+            <a href="">
+              Read More
+            </a>
+          -->
+          </div>
+        </div>
+        <div class="col-md-6 px-0">
+          <div class="img-box">
+            <img src="images/about-img.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- contact section -->
+
+  <section class="contact_section layout_padding-bottom ">
+    <center><div class="container">
+      <h2>
+        Get In touch
+      </h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form_container">
+            <form action="">
+              <input type="text" placeholder="Name">
+              <input type="text" placeholder="Phone number">
+              <input type="email" placeholder="Email">
+
+              <input type="text" placeholder="Message" class="message_input">
+              <button>
+                Send
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="dish_container">
+            <div class="box">
+              <img src="images/dish.jpg" alt="">
+            </div>
+        </div>
+      </div>
+    </div></center>
+  </section>
+
+  <!-- end contact section -->
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <div class="social_container">
+      <h4>
+        Share on
+      </h4>
+      <div class="social-box">
+        <a href="https://www.facebook.com" target="_blank">
+          <img src="images/fb.png" alt="facebook logo">
+        </a>
+        <a href="https://x.com" target="_blank">
+          <img src="images/twitter.png" alt="twitter logo">
+        </a>
+        <a href="https://linkedin.com" target="_blank">
+          <img src="images/linkedin.png" alt="linkedin logo">
+        </a>
+        <a href="https://www.youtube.com" target="_blank">
+          <img src="images/youtube.png" alt="youtube logo">
+        </a>
+      </div>
+    </div>
+    <p>
+      Design by CAP3104 Team 25</a>
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+
+  <script>
+    function openNav() {
+      document.getElementById("myNav").classList.toggle("menu_width");
+      document
+        .querySelector(".custom_menu-btn")
+        .classList.toggle("menu_btn-style");
+    }
+  </script>
+
+  <!-- owl carousel script -->
+  <script type="text/javascript">
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 35,
+      navText: [],
+      autoplay: true,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
+  </script>
+  <!-- end owl carousel script -->
+
+</body>
+
+</html>
