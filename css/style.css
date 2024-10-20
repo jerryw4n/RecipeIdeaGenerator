@@ -19,7 +19,7 @@ body {
 }
 
 .layout_padding {
-  padding: 90px 0;
+  padding: 50px 0;
 }
 
 .layout_padding2 {
@@ -84,7 +84,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 18%;
+  width: 38%;
   min-width: 150px;
   height: 100%;
   background: -webkit-gradient(linear, left top, right top, from(#51b5ef), to(#436bf1));
@@ -325,7 +325,7 @@ a:focus {
 
 .slider_section .detail-box {
   margin-top: 65px;
-  position: relative;
+
 }
 
 .slider_section .detail-box h1 {
